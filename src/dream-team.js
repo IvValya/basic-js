@@ -21,19 +21,34 @@ if (members instanceof Array)
   let newlyname='';
   for (let i=0; i<members.length; i++)
   {
-     if (isNaN(members[i]))
+    let current_member=members[i];
+    console.log(typeof current_member) //isNaN(members[i])&&!Array
+     if ( (typeof current_member)== 'string')
     {
-      members[i]=members[i].trim();
-       newlyname += members[i][0];
+      current_member=current_member.trim();
+       newlyname += current_member[0];
     }
   } 
-  return (newlyname.split('').sort().join('')).toUpperCase();
+  newlyname=newlyname.toUpperCase();
+  return (newlyname.split('').sort().join(''));
 }
 else {
   return false;
 }
 }
-
+createDreamTeam([
+  ['David Abram'],
+  ['Robin Attfield'],
+  'Thomas Berry',
+  ['Paul R.Ehrlich'],
+  'donna Haraway',
+  ' BrIaN_gOodWiN  ',
+  {
+    0: 'Serenella Iovino'
+  },
+  'Erazim Kohak',
+  '  val_plumwood',
+]);
 module.exports = {
   createDreamTeam
 };
