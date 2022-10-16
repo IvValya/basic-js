@@ -47,8 +47,7 @@ function getSeason(date) {
   }
   console.log("OK");
 }
-const springDate = new Date(2020, 02, 31);
-getSeason(springDate);
+
 
 module.exports = {
   getSeason

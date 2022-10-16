@@ -24,7 +24,7 @@ function calculateHanoi(disksNumber, turnsSpeed) {
     seconds
   };
 }
-calculateHanoi(9, 4308);
+
 module.exports = {
   calculateHanoi
 };
